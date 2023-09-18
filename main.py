@@ -74,3 +74,11 @@ nr_numbers = int(input("How many numbers would you like?\n"))
 random_letters = random.choices(letters, k = nr_letters)
 random_numbers = random.choices(numbers, k = nr_numbers)
 random_symbols = random.choices(symbols, k = nr_symbols)
+
+password_chars = random_letters + random_symbols + random_numbers
+random.shuffle(password_chars)
+
+password = ""
+for password_char in password_chars:
+    password += password_char
+print(password)
