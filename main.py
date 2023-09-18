@@ -77,4 +77,4 @@ pw_chars += random.choices(symbols, k = nr_symbols)
 
 random.shuffle(pw_chars)
 password = "".join(pw_chars)
-print("Here is your pw_chars:", password)
+print("Here is your password:", password)
