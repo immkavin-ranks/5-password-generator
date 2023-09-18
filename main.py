@@ -70,12 +70,11 @@ nr_numbers = int(input("How many numbers would you like?\n"))
 # Hard Level - Order of characters randomized:
 # e.g. 4 letter, 2 symbol, 2 number = g^2jk8&P
 
+pw_chars = []
+pw_chars += random.choices(letters, k = nr_letters)
+pw_chars += random.choices(numbers, k = nr_numbers)
+pw_chars += random.choices(symbols, k = nr_symbols)
 
-random_letters = random.choices(letters, k = nr_letters)
-random_numbers = random.choices(numbers, k = nr_numbers)
-random_symbols = random.choices(symbols, k = nr_symbols)
-
-pw_chars = random_letters + random_symbols + random_numbers
 random.shuffle(pw_chars)
 password = "".join(pw_chars)
 print("Here is your pw_chars:", password)
