@@ -75,7 +75,7 @@ random_letters = random.choices(letters, k = nr_letters)
 random_numbers = random.choices(numbers, k = nr_numbers)
 random_symbols = random.choices(symbols, k = nr_symbols)
 
-password = random_letters + random_symbols + random_numbers
-random.shuffle(password)
-password = "".join(password)
-print("Here is your password:", password)
+pw_chars = random_letters + random_symbols + random_numbers
+random.shuffle(pw_chars)
+password = "".join(pw_chars)
+print("Here is your pw_chars:", password)
